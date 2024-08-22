@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onload event</title>
+    <script>
+        window.onload = addContent;
+
+        function addContent() {
+            let theDiv = document.getElementById("test");
+            theDiv.innerHTML = "Have a nice day";
+            theDiv.style = "color:blue";
+        }
+    </script>
+</head>
+
+<body>
+    <div id=test>Lorem ipsum</div>
+    <div>12345</div>
+</body>
+
+</html>

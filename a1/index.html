@@ -3,27 +3,62 @@
 <html lang="en">
 
 <head>
-	<title>Assessment 1</title>
+	<title>Pets Victoria</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/main.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@1..1000&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
-	
 </head>
 
 <body>
     <nav>
-        <img src="images/logo.png" alt="logo" width="50">
+        <a href="index.html" target="_blank">
+            <img src="images/logo.png" alt="logo" class="logo">
+        </a>
+
+        <img src="images/search.png" alt="search" class="search">
+
+        <div class="navSearch">
+            <input type="text" placeholder="Search">
+          </div> 
+
+          <div class="navMenu">
+            <form>
+                <select id="navMenu" onchange=doMenu();>
+                    <option value="">Select an Option...</option>
+                    <option value="index.html">Home</option>
+                    <option value="pets.html">Discover Pets</option>
+                    <option value="add.html">Add a Pet</option>
+                    <option value="gallery.html">Gallery</option>
+                </select>
+            </form>
+          </div>
     </nav>
 
     <main>
-        <h1>PETS VICTORIA</h1>
-        <h1>WELCOME TO PET ADOPTION</h1>
-    
-        <img src="images/main.jpeg" alt="main" width="200">
+        <div class="container">
+            <div class="textContent1">
+                <h1>PETS VICTORIA</h1>
+                <h2>WELCOME TO PET <br>ADOPTION</h2>
+            </div>
+            <img src="images/main.jpeg" alt="main" class="main">
+        </div>
     </main>
 
     <footer>
         &copy; Copyright s3969368. All Rights Reserved | Designed for Pets Victoria
     </footer>
 </body>
-
-</html>
