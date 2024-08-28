@@ -148,3 +148,25 @@ footer {
 .main-section-2 tbody {
     color: #36454F;
 }
+
+
+
+
+
+.main-section-3 {
+    background-color: #ffffff;
+    margin: 0 auto;
+    padding: 5px;
+    min-height: 500px;
+}
+
+
+
+
+
+.main-section-4 {
+    background-color: #ffffff;
+    margin: 0 auto;
+    padding: 5px;
+    min-height: 500px;
+}
