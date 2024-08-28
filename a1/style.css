@@ -55,13 +55,6 @@ body {
     min-height: 500px;
 }
 
-.main-section-2 {
-    background-color: #ffffff;
-    margin: 0 auto;
-    padding: 5px;
-    min-height: 500px;
-}
-
 .container {
     position: relative;
     overflow: hidden;
@@ -107,4 +100,31 @@ footer {
     padding: 30px;
     overflow: auto;
     border-radius: 10px;
+}
+
+
+
+
+
+.main-section-2 {
+    background-color: #ffffff;
+    margin: 0 auto;
+    padding: 5px;
+    min-height: 500px;
+}
+
+.textContent2 h3 {
+    text-align: center;
+}
+
+.textContent2 p {
+    text-align: center;
+}
+
+.pets {
+    float: left;
+}
+
+.main-section-2 table {
+    float: right;
 }
