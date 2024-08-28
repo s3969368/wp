@@ -199,6 +199,7 @@ footer {
 
 div.gallery {
     border: 1px solid #cccccc;
+    box-sizing: border-box;
     border-radius: 20px;
   }
   
@@ -217,11 +218,7 @@ div.name {
     font-family: "Poetsen One", sans-serif;
   }
   
-* {
-    box-sizing: border-box;
-    border-top-left-radius: 20px; 
-    border-top-right-radius: 20px;
-}
+
     
 .responsive {
     padding: 0 6px;
