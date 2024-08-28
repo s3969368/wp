@@ -218,8 +218,10 @@ div.name {
   
 * {
     box-sizing: border-box;
-  }
-  
+    border-top-left-radius: 20px; 
+    border-top-right-radius: 20px;
+}
+    
 .responsive {
     padding: 0 6px;
     float: left;
