@@ -116,7 +116,7 @@ footer {
 .textContent2 h3 {
     text-align: center;
     font-family: "Ysabeau SC", sans-serif;
-    font-size: 1.5em;
+    font-size: 1.3em;
     color: #36454F;
 }
 
@@ -163,7 +163,7 @@ footer {
 .textContent3 h3 {
     text-align: center;
     font-family: "Ysabeau SC", sans-serif;
-    font-size: 1.5em;
+    font-size: 1.3em;
     color: #36454F;
 }
 
@@ -182,4 +182,17 @@ footer {
     margin: 0 auto;
     padding: 5px;
     min-height: 600px;
+}
+
+.textContent4 h3 {
+    text-align: center;
+    font-family: "Ysabeau SC", sans-serif;
+    font-size: 1.3em;
+    color: #36454F;
+}
+
+.textContent4 p {
+    text-align: center;
+    font-family: "Ysabeau SC", sans-serif;
+    color: #36454F;
 }
