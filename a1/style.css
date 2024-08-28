@@ -210,6 +210,8 @@ div.gallery:hover {
 div.gallery img {
     width: 100%;
     height: auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
   }
   
 div.name {
@@ -217,8 +219,6 @@ div.name {
     text-align: center;
     font-family: "Poetsen One", sans-serif;
   }
-  
-
     
 .responsive {
     padding: 0 6px;
