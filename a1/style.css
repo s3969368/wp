@@ -205,7 +205,7 @@ div.gallery:hover {
     border: 1px solid #777777;
   }
   
-div.gallery-milo {
+.milo {
     width: 50%;
     height: auto;
   }
