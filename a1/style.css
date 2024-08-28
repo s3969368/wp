@@ -115,10 +115,14 @@ footer {
 
 .textContent2 h3 {
     text-align: center;
+    font-family: "Ysabeau SC", sans-serif;
+    color: #36454F;
 }
 
 .textContent2 p {
     text-align: center;
+    font-family: "Ysabeau SC", sans-serif;
+    color: #36454F;
 }
 
 .pets {
@@ -127,4 +131,16 @@ footer {
 
 .main-section-2 table {
     float: right;
+    font-family: "Ysabeau SC", sans-serif;
+    display: table;
+    border: 0.5px solid black;
+}
+
+.main-section-2 thead {
+    color: #008080;
+    background-color: #fcf9ec;
+}
+
+.main-section-2 tbody {
+    color: #36454F;
 }
