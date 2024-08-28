@@ -199,6 +199,7 @@ footer {
 
 div.gallery {
     border: 1px solid #cccccc;
+    border-radius: 20px;
   }
   
 div.gallery:hover {
@@ -217,7 +218,6 @@ div.name {
   
 * {
     box-sizing: border-box;
-    border-radius: 20px;
   }
   
 .responsive {
