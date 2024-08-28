@@ -74,13 +74,13 @@ body {
     height: auto;
 }
 
-.main1-container1-h1 {
+.textContent1 h1 {
     font-family: 'Permanent Marker', sans-serif;
     font-size: 3.5em;
     color: #E57F3D;
 }
 
-.main1-container1-h2 {
+.textContent1 h2 {
     font-family: "Poetsen One", sans-serif;
     font-size: 3em;
     color: #008080;
