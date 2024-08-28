@@ -55,6 +55,13 @@ main {
     min-height: 500px;
 }
 
+.containerMain {
+    background-color: null;
+    margin: 0 auto;
+    padding: 5px;
+    min-height: 500px;
+}
+
 .container {
     position: relative;
     overflow: hidden;
