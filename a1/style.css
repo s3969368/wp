@@ -215,6 +215,10 @@ div.gallery img {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
   }
+
+.img-luna {
+    height: 245px;
+}
   
 div.name {
     padding: 15px;
