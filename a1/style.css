@@ -201,6 +201,11 @@ div.gallery {
     border: 1px solid #cccccc;
     box-sizing: border-box;
     border-radius: 20px;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   
 div.gallery:hover {
@@ -210,6 +215,7 @@ div.gallery:hover {
 div.gallery img {
     width: 100%;
     height: auto;
+    object-fit: cover;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
   }
@@ -223,7 +229,7 @@ div.name {
 .responsive {
     padding: 0 6px;
     float: left;
-    width: 25%;
+    width: 33.33333%;
   }
   
 @media only screen and (max-width: 700px) {
