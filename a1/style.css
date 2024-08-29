@@ -233,6 +233,7 @@ div.name {
     width: 25%;
     margin-left: auto;
     margin-right: auto;
+    float: left;
     justify-content: center;
     align-content: center;
   }
