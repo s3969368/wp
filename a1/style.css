@@ -230,22 +230,22 @@ div.name {
     padding: 0 6px;
     padding-top: 6px;
     padding-bottom: 6px;
-    width: calc(33.3333% - 25px);  /* Three boxes per row, considering padding */
-    box-sizing: border-box;
+    width: 25%;
+    float: left;
     justify-content: center;
     align-content: center;
   }
   
 @media only screen and (max-width: 700px) {
     .responsive {
-      width: calc(50% - 25px);  /* Two boxes per row */
+      width: 50%;
       margin: 6px 0;
     }
   }
   
 @media only screen and (max-width: 500px) {
     .responsive {
-      width: calc(100% - 25px);  /* One box per row */
+      width: 100%;
     }
   }
   
