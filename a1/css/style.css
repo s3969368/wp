@@ -178,7 +178,7 @@ footer {
     float: left;
 }
 
-input[type=text], select, textarea {
+.main-section-3 [type=text], select, textarea {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
