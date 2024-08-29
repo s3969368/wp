@@ -177,7 +177,6 @@ footer {
 
 
 
-/* Main section styling */
 .main-section-4 {
     background-color: #ffffff;
     margin: 0 auto;
@@ -185,7 +184,6 @@ footer {
     min-height: 600px;
 }
 
-/* Text styling */
 .textContent4 h3 {
     text-align: center;
     font-family: "Poetsen One", sans-serif;
@@ -199,68 +197,52 @@ footer {
     color: #36454F;
 }
 
-/* Gallery box styling */
 div.gallery {
     border: 1px solid #cccccc;
     box-sizing: border-box;
     border-radius: 20px;
     align-content: center;
-    height: auto;  /* Set height of the gallery box */
-    margin: 0 auto;
-    overflow: hidden;
-    padding: 15px;
-}
-
-/* Hover effect */
+  }
+  
 div.gallery:hover {
     border: 1px solid #777777;
-}
-
-/* Image styling */
+  }
+  
 div.gallery img {
     width: 100%;
-    height: auto;  /* Set height of the image */
-    object-fit: cover;  /* Fill the space without distortion */
+    height: auto;
+    object-fit: cover;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-}
-
-/* Name styling */
+  }
+  
 div.name {
     padding: 15px;
     text-align: center;
     font-family: "Poetsen One", sans-serif;
-    height: 50px;  /* Reserve space for the name */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1em;
-}
-
-/* Responsive styling */
+  }
+    
 .responsive {
-    padding: 0 12.5px;  /* 25px total around each gallery box */
+    padding: 0 6px;
     float: left;
-    width: calc(33.3333% - 25px);  /* Three boxes per row, considering padding */
-    box-sizing: border-box;
-}
-
+    width: 25%;
+  }
+  
 @media only screen and (max-width: 700px) {
     .responsive {
-        width: calc(50% - 25px);  /* Two boxes per row */
-        margin: 6px 0;
+      width: 50%;
+      margin: 6px 0;
     }
-}
-
+  }
+  
 @media only screen and (max-width: 500px) {
     .responsive {
-        width: calc(100% - 25px);  /* One box per row */
+      width: 100%;
     }
-}
-
-/* Clearfix */
+  }
+  
 .clearfix:after {
     content: "";
     display: table;
     clear: both;
-}
+  }
