@@ -208,8 +208,8 @@ div.gallery {
     align-content: center;
   }
   
-div.gallery:hover {
-    opacity: 0.3;
+div.gallery img:hover {
+    opacity: 0.2;
   }
   
 div.gallery img {
