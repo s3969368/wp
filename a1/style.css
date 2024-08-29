@@ -228,6 +228,7 @@ div.name {
     padding-top: 6px;
     padding-bottom: 6px;
     width: 25%;
+    float: left;
     justify-content: center;
     align-content: center;
   }
