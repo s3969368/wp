@@ -178,7 +178,27 @@ footer {
     float: left;
 }
 
-.addpetform [type=text], .addpetform select, textarea {
+.addpetform [type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  .addpetform select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+    textarea {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
