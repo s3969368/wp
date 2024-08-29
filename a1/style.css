@@ -229,6 +229,8 @@ div.name {
     padding-bottom: 6px;
     float: left;
     width: 25%;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-content: center;
   }
