@@ -227,11 +227,12 @@ div.name {
   }
     
 .responsive {
-    padding: 0 6px;
+    padding: 6px;
     padding-top: 6px;
     padding-bottom: 6px;
     width: 25%;
-    float: left;
+    margin-left: auto;
+    margin-right: auto;
     justify-content: center;
     align-content: center;
   }
