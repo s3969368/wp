@@ -208,7 +208,7 @@ div.gallery {
     align-content: center;
   }
   
-div.gallery:hover .overlay{
+div.gallery:hover {
     opacity: 0.3;
   }
   
