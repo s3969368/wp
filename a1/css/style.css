@@ -228,7 +228,8 @@ textarea {
 .clear-btn {
     background-color: #ffffff;
     color: #008080;
-    border-color: #008080;
+    border: 2px solid #008080;
+    
 }
 
 .clear-btn:hover {
