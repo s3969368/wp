@@ -175,7 +175,7 @@ footer {
 }
 
 #addpetform {
-    float: left;
+    float: none;
 }
 
 .addpetform [type=text], .addpetform select, textarea {
@@ -186,10 +186,12 @@ footer {
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 4px;
+    float: left;
   }
 
 textarea {
     resize: vertical; 
+    float: left;
 }  
 
 .addpetform label {
@@ -197,6 +199,7 @@ textarea {
     color: #36454F;
     padding-bottom: 5px;
     margin-bottom: 5px;
+    float: left;
 }
 
 .addpetform input {
