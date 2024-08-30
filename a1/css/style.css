@@ -203,6 +203,10 @@ textarea {
     padding-top: 0px;
 }
 
+.addpetform select {
+    background-color: #ccc;
+}
+
 
 
 
