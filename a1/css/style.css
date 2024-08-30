@@ -237,7 +237,7 @@ textarea {
 .button-group {
     display: flex;
     justify-content: center;
-    justify-content: space-between;
+    gap: 30px;
     width: 100%;
     max-width: 400px; /* Adjust width to your needs */
     margin: 10px auto 10;
