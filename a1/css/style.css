@@ -181,7 +181,7 @@ footer {
 .addpetform [type=text], .addpetform select, textarea {
     width: 100%;
     padding: 8px;
-    margin-top: 5px;
+    margin-top: 0px;
     margin-bottom: 15px;
     box-sizing: border-box;
     border: 1px solid #ccc;
