@@ -211,7 +211,6 @@ textarea {
     display: inline-block;
     padding: 10px 20px;
     border-radius: 50px;
-    border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -219,6 +218,7 @@ textarea {
 .submit-btn {
     background-color: #008080;
     color: #ffffff;
+    border: none;
 }
 
 .submit-btn:hover {
@@ -228,6 +228,7 @@ textarea {
 .clear-btn {
     background-color: #ffffff;
     color: #008080;
+    border-color: #008080;
 }
 
 .clear-btn:hover {
