@@ -32,7 +32,7 @@ nav {
     border-radius: 4px;
 }
 
-.navMenu {
+#navMenu {
     float: left;
     width: 200px;
     height: 30px;
