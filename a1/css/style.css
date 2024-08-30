@@ -192,6 +192,11 @@ textarea {
     resize: vertical; 
 }  
 
+.addpetform label {
+    font-family: "Ysabeau SC", sans-serif;
+    color: #36454F;
+}
+
 
 
 
