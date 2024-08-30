@@ -212,25 +212,26 @@ textarea {
     padding: 10px 20px;
     border-radius: 50px;
     border: none;
-    color: #ffffff;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .submit-btn {
-    background-color: #4CAF50;
+    background-color: #008080;
+    color: #ffffff;
 }
 
 .submit-btn:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background-color: #007070; /* Darker on hover */
 }
 
 .clear-btn {
-    background-color: #f44336;
+    background-color: #ffffff;
+    color: #008080;
 }
 
 .clear-btn:hover {
-    background-color: #d32f2f; /* Darker red on hover */
+    background-color: #eeeeee;
 }
 
 /* Align the buttons side by side */
