@@ -1,0 +1,361 @@
+nav {
+    display: block;
+    background-color: #008080;
+    padding: 10px;
+    overflow: auto;
+    border-radius: 10px;
+}
+
+.logo {
+    float: left;
+    margin-left: 30px;
+    width: 50px;
+}
+
+.search {
+    float: right;
+    margin-top: 10px;
+    margin-right: 20px;
+    padding-left: 0px;
+    width: 30px;
+}
+
+.navSearch input[type=text] {
+    float: right;
+    width: 150px;
+    height: 30px;
+    margin-top: 5px;
+    margin-right: 10px;
+    padding: 5px;
+    padding-right: 0px;
+    border: none;
+    border-radius: 4px;
+}
+
+#navMenu {
+    float: left;
+    width: 145px;
+    height: 35px;
+    margin-top: 7px;
+    margin-bottom: 0px; 
+    margin-left: 20px;
+    padding: 5px;
+    border: none;
+    border-radius: 4px; 
+}
+
+body {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.main1 {
+    background-color: #fcf9ec;
+    margin: 0 auto;
+    padding: 5px;
+    min-height: 500px;
+}
+
+.container {
+    position: relative;
+    overflow: hidden;
+}
+
+.textContent1 {
+    margin-top: 50px;
+    margin-left: 30px;
+    float: left;
+    height: auto;
+}
+
+.container h1 {
+    font-family: 'Permanent Marker', sans-serif;
+    font-size: 3.5em;
+    color: #E57F3D;
+}
+
+.container h2 {
+    font-family: "Poetsen One", sans-serif;
+    font-size: 3em;
+    color: #008080;
+}
+
+.main { 
+    width: 450px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-right: 30px;
+    float: right;
+    border-radius: 50%; /* This makes the image round */
+    box-shadow: 0px 0px 20px rgba(138, 138, 138, 0.5);
+    object-fit: cover;
+    top: 50px;
+}
+
+footer {
+    display: block;
+    background-color: #E57F3D;
+    text-align: center;
+    font-family: "Ysabeau SC", sans-serif;
+    color: #36454F;
+    padding: 30px;
+    overflow: auto;
+    border-radius: 10px;
+}
+
+
+
+
+
+.main-section-2 {
+    background-color: #ffffff;
+    margin: 0 auto;
+    padding: 5px;
+    min-height: 500px;
+}
+
+.textContent2 h3 {
+    text-align: center;
+    font-family: "Poetsen One", sans-serif;
+    font-size: 1.3em;
+    color: #36454F;
+}
+
+.textContent2 p {
+    text-align: center;
+    font-family: "Ysabeau SC", sans-serif;
+    color: #36454F;
+}
+
+.pets {
+    float: left;
+    margin-top: 20px;
+}
+
+.main-section-2 table {
+    float: right;
+    font-family: "Ysabeau SC", sans-serif;
+    display: table;
+    border: 0.5px solid black;
+    width: 600px;
+    margin-top: 20px;
+}
+
+.main-section-2 thead {
+    color: #008080;
+    background-color: #fcf9ec;
+}
+
+.main-section-2 tbody {
+    color: #36454F;
+}
+
+
+
+
+
+.main-section-3 {
+    background-color: #ffffff;
+    margin: 0 auto;
+    padding: 5px;
+    min-height: 600px;
+}
+
+.textContent3 h3 {
+    text-align: center;
+    font-family: "Poetsen One", sans-serif;
+    font-size: 1.3em;
+    color: #36454F;
+}
+
+.textContent3 p {
+    text-align: center;
+    font-family: "Ysabeau SC", sans-serif;
+    color: #36454F;
+}
+
+#addpetform {
+    float: left;
+}
+
+.addpetform [type=text], .addpetform select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+textarea {
+    resize: vertical; 
+}  
+
+.addpetform label {
+    font-family: "Ysabeau SC", sans-serif;
+    color: #36454F;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+.addpetform input {
+    padding-top: 0px;
+}
+
+.addpetform select {
+    background-color: #ffffff;
+}
+
+.btn {
+    display: inline-block;
+    font-size: 0.7em;
+    padding: 5px 10px;
+    width: 100px;
+    height: 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn {
+    background-color: #008080;
+    color: #ffffff;
+    border: none;
+}
+
+.submit-btn:hover {
+    background-color: #007070; /* Darker on hover */
+}
+
+.clear-btn {
+    background-color: #ffffff;
+    color: #008080;
+    border: 1.5px solid #008080;
+    
+}
+
+.clear-btn:hover {
+    background-color: #f1f1f1;
+}
+
+/* Align the buttons side by side */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 400px; /* Adjust width to your needs */
+    margin: 10px auto 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 7px;
+}
+
+
+
+
+
+
+
+.main-section-4 {
+    background-color: #ffffff;
+    margin: 0 auto;
+    padding: 5px;
+    min-height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center items horizontally */
+}
+
+.textContent4 h3 {
+    text-align: center;
+    font-family: "Poetsen One", sans-serif;
+    font-size: 1.3em;
+    color: #36454F;
+}
+
+.textContent4 p {
+    text-align: center;
+    font-family: "Ysabeau SC", sans-serif;
+    color: #36454F;
+}
+
+div.gallery {
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+    border-radius: 20px;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+  }
+  
+/* div.gallery img:hover {
+    opacity: 0.1;
+    transition: .5s ease;
+
+  } */
+
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    right: 0;
+    background-color: rgba(255,255,255,0.0);
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+  }
+
+  .gallery:hover .overlay {
+    width: 100%;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  
+div.gallery img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  
+div.name {
+    padding: 15px;
+    text-align: center;
+    font-family: "Poetsen One", sans-serif;
+  }
+    
+.responsive {
+    padding: 6px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    width: 25%;
+    margin-left: 65px;
+    margin-right: auto;
+    float: left;
+    justify-content: center;
+    align-content: center;
+  }
+  
+@media only screen and (max-width: 700px) {
+    .responsive {
+      width: 50%;
+      margin: 6px 0;
+    }
+  }
+  
+@media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+  }
+  
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
