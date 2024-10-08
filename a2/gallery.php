@@ -6,6 +6,28 @@ include('includes/header.inc');
 include('includes/nav.inc');
 ?>
 
+<?php
+include('db_connect.inc');
+
+$sql = "SELECT petid, image, caption FROM pets";
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo "<div class='gallery-item'>";
+        echo "<a href='details.php?id=" . $row['petid'] . "'>";
+        echo "<img src='a2/images" . htmlspecialchars($row['image']) . "' alt='" . htmlspecialchars($row['caption']) . "'>";
+        echo "</a>";
+        echo "<p>" . htmlspecialchars($row['caption']) . "</p>";
+        echo "</div>";
+    }
+  } else {
+    echo "<p>No pets available at the moment.</p>";
+  }
+
+mysqli_close($conn);
+?>
+
 <section class="main-section-4">
         <div class="container">
             <div class="textContent4">

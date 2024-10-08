@@ -6,6 +6,29 @@ include('includes/header.inc');
 include('includes/nav.inc');
 ?>
 
+<?php
+include("db_connect.inc");
+
+ $query = "SELECT petid, petname, age, type, location, image FROM pets";
+ $result = mysqli_query($conn, $query);
+
+ if (mysqli_num_rows($result) > 0) {
+     while ($row = mysqli_fetch_assoc($result)) {
+         echo "<tr>";
+         echo "<td><a href='details.php?id=" . $row['petid'] . "'>" . htmlspecialchars($row['petname']) . "</a></td>";
+         echo "<td><img src='images/" . htmlspecialchars($row['image']) . "' alt='" . htmlspecialchars($row['petname']) . "' width='100'></td>";
+         echo "<td>" . htmlspecialchars($row['age']) . "</td>";
+         echo "<td>" . htmlspecialchars($row['type']) . "</td>";
+         echo "<td>" . htmlspecialchars($row['location']) . "</td>";
+         echo "</tr>";
+     }
+ } else {
+     echo "<tr><td colspan='5'>No pets available at the moment.</td></tr>";
+ }
+
+ mysqli_close($conn);
+?>
+
 <section class="main-section-2">
         <div class="container">
             <div class="textContent2">

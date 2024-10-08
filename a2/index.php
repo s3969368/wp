@@ -6,6 +6,10 @@ include('includes/header.inc');
 include('includes/nav.inc');
 ?>
 
+<?php
+include("db_connect.inc");
+?>
+
 <main class="main1">
         <div class="container">
             <div class="textContent1">

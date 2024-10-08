@@ -6,6 +6,44 @@ include('includes/header.inc');
 include('includes/nav.inc');
 ?>
 
+<?php
+include("db_connect.inc");
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $petname = mysqli_real_escape_string($conn, $_POST['petname']);
+    $description = mysqli_real_escape_string($conn, $_POST['description']);
+    $caption = mysqli_real_escape_string($conn, $_POST['caption']);
+    $age = (float) $_POST['age'];
+    $type = mysqli_real_escape_string($conn, $_POST['type']);
+    $location = mysqli_real_escape_string($conn, $_POST['location']);
+
+    $target_dir = "a2/images";
+    $target_file = $target_dir . basename($_FILES["image"]["name"]);
+    $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+    
+    $check = getimagesize($_FILES["image"]["tmp_name"]);
+    if ($check === false) {
+        die("File is not an image.");
+    }
+
+    if (!move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
+        die("There was an error uploading your file.");
+    }
+
+    $sql = "INSERT INTO pets (petname, description, caption, age, type, location, image) 
+            VALUES ('$petname', '$description', '$caption', '$age', '$type', '$location', '$target_file')";
+
+    if (mysqli_query($conn, $sql)) {
+        echo "New pet added successfully!";
+        header('Location: pets.php');
+    } else {
+        echo "Error: " . mysqli_error($conn);
+    }
+}
+
+mysqli_close($conn);
+?>
+
 <section class="main-section-3">
         <div class="container">
             <div class="textContent3">
