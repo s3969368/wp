@@ -1,5 +1,5 @@
 <nav>
-        <a href="index.html" target="_blank">
+        <a href="index.php" target="_blank">
             <img src="images/logo.png" alt="logo" class="logo">
         </a>
 
@@ -13,10 +13,10 @@
             <form>
                 <select id="navMenu" onchange=doMenu();>
                     <option value="">Select an Option...</option>
-                    <option value="index.html">Home</option>
-                    <option value="pets.html">Discover Pets</option>
-                    <option value="add.html">Add a Pet</option>
-                    <option value="gallery.html">Gallery</option>
+                    <option value="index.php">Home</option>
+                    <option value="pets.php">Discover Pets</option>
+                    <option value="add.php">Add a Pet</option>
+                    <option value="gallery.php">Gallery</option>
                 </select>
             </form>
         </div>
