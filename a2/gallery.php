@@ -7,25 +7,10 @@ include('includes/nav.inc');
 ?>
 
 <?php
-include('db_connect.inc');
+include('includes/db_connect.inc');
 
 $sql = "SELECT petid, image, caption FROM pets";
 $result = mysqli_query($conn, $sql);
-
-if (mysqli_num_rows($result) > 0) {
-    while ($row = mysqli_fetch_assoc($result)) {
-        echo "<div class='gallery-item'>";
-        echo "<a href='details.php?id=" . $row['petid'] . "'>";
-        echo "<img src='a2/images" . htmlspecialchars($row['image']) . "' alt='" . htmlspecialchars($row['caption']) . "'>";
-        echo "</a>";
-        echo "<p>" . htmlspecialchars($row['caption']) . "</p>";
-        echo "</div>";
-    }
-  } else {
-    echo "<p>No pets available at the moment.</p>";
-  }
-
-mysqli_close($conn);
 ?>
 
 <section class="main-section-4">
@@ -41,7 +26,10 @@ mysqli_close($conn);
                     <img src="images/milo.jpeg" alt="Milo" class="milo">
                   </a>
                   <div class="overlay">
-                    <!-- add overlay icon and "Discover More" -->
+                    <div class="text">
+                      <i class="material-icons" style="font-size:36px">search</i>
+                      <p><a href="details.php">Discover more!</a></p>
+                    </div>
                   </div>
                   <div class="name">Milo</div>
                 </div>
@@ -91,7 +79,24 @@ mysqli_close($conn);
                   <div class="name">Bella</div>
                 </div>
             </div>
-
+            
+            <?php
+            if (mysqli_num_rows($result) > 0) {
+              while ($row = mysqli_fetch_assoc($result)) {
+                  echo "<div class='responsive'>";
+                  echo "<div class='gallery'>";
+                  echo "<a href='details.php?id=" . $row['petid'] . "'>";
+                  echo "<img src='images/" . htmlspecialchars($row['image']) . "' alt='" . htmlspecialchars($row['caption']) . "'>";
+                  echo "</a>";
+                  echo "<div class='name'>" . htmlspecialchars($row['caption']) . "</div>";
+                  echo "</div></div>";
+              }
+            } else {
+              echo "<p>No pets available at the moment.</p>";
+            }
+          
+            mysqli_close($conn);
+            ?>
             <div class="clearfix"></div>
         </div>
     </section>

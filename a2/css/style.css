@@ -314,6 +314,11 @@ div.gallery {
     left: 0;
     background-color: rgba(255, 255, 255, 0.5);
   }
+
+.text {
+    font-family: "Poetsen One", sans-serif;
+    text-align: center;
+}
   
 div.gallery img {
     width: 100%;

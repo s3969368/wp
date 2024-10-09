@@ -7,7 +7,7 @@ include('includes/nav.inc');
 ?>
 
 <?php
-include("db_connect.inc");
+include("includes/db_connect.inc");
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $petname = mysqli_real_escape_string($conn, $_POST['petname']);
@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $type = mysqli_real_escape_string($conn, $_POST['type']);
     $location = mysqli_real_escape_string($conn, $_POST['location']);
 
-    $target_dir = "a2/images";
+    $target_dir = "images/";
     $target_file = $target_dir . basename($_FILES["image"]["name"]);
     $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
     
