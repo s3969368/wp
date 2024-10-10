@@ -16,9 +16,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $age = (float) $_POST['age'];
     $type = mysqli_real_escape_string($conn, $_POST['type']);
     $location = mysqli_real_escape_string($conn, $_POST['location']);
+    $image = $_FILES['image']['name'];
 
-    $target_dir = "images/";
-    $target_file = $target_dir . basename($_FILES["image"]["name"]);
+   
+    $target_file = "images/" . basename($_FILES["image"]["name"]);
     $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
     
     $check = getimagesize($_FILES["image"]["tmp_name"]);
@@ -31,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     $sql = "INSERT INTO pets (petname, description, caption, age, type, location, image) 
-            VALUES ('$petname', '$description', '$caption', '$age', '$type', '$location', '$target_file')";
+            VALUES ('$petname', '$description', '$caption', '$age', '$type', '$location', '$image')";
 
     if (mysqli_query($conn, $sql)) {
         echo "New pet added successfully!";
@@ -50,16 +51,16 @@ mysqli_close($conn);
                 <h3>Add a pet</h3>
                 <p>You can add a new pet here</p>
             </div>
-            <form action="add.php" class="addpetform" method="post">
+            <form action="add.php" class="addpetform" method="post" enctype="multipart/form-data">
                 <label for="petname">Pet Name:</label>
                 <input type="text" id="petname" name="petname" placeholder="Provide a name for the pet">
               
                 <label for="type">Type:</label>
                 <select id="type" name="type">
                   <option value="">--Choose an option--</option>
-                  <option value="">Dog</option>
-                  <option value="">Cat</option>
-                  <option value="">Small Animal</option>
+                  <option value="Dog">Dog</option>
+                  <option value="Cat">Cat</option>
+                  <option value="Small Animal">Small Animal</option>
                 </select>
               
                 <label for="description">Description</label>
@@ -68,21 +69,20 @@ mysqli_close($conn);
                 <label for="image">Select an Image:</label>
                 <input type="file" id="image" name="image"><br><br>
               
-                <label for="imgcaption">Image Caption:</label>
-                <input type="text" id="imgcaption" name="imgcaption" placeholder="Describe the image in one word">
+                <label for="caption">Image Caption:</label>
+                <input type="text" id="caption" name="caption" placeholder="Describe the image in one word">
               
                 <label for="age">Age (months):</label>
                 <input type="text" id="age" name="age" placeholder="Age of the pet in months">
               
                 <label for="location">Location:</label>
                 <input type="text" id="location" name="location" placeholder="Location of the pet">
-              
-            </form>
-
+                              
                 <div class="button-group">
                     <button type="submit" class="btn submit-btn">submit</button>
                     <button type="reset" class="btn clear-btn">clear</button>
                 </div>
+            </form>
         </div>
     </section>
 
