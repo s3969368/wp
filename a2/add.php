@@ -50,14 +50,16 @@ mysqli_close($conn);
                 <h3>Add a pet</h3>
                 <p>You can add a new pet here</p>
             </div>
-            <form action="/.php" class="addpetform">
-
+            <form action="add.php" class="addpetform" method="post">
                 <label for="petname">Pet Name:</label>
                 <input type="text" id="petname" name="petname" placeholder="Provide a name for the pet">
               
                 <label for="type">Type:</label>
                 <select id="type" name="type">
                   <option value="">--Choose an option--</option>
+                  <option value="">Dog</option>
+                  <option value="">Cat</option>
+                  <option value="">Small Animal</option>
                 </select>
               
                 <label for="description">Description</label>
