@@ -25,13 +25,11 @@ $result = mysqli_query($conn, $sql);
               while ($row = mysqli_fetch_assoc($result)) {
                   echo "<div class='responsive'>";
                   echo "<div class='gallery'>";
-                  echo "<a href='details.php?id=" . $row['petid'] . "'>";
                   echo "<img src='images/" . htmlspecialchars($row['image']) . "' alt='" . htmlspecialchars($row['caption']) . "'>";
-                  echo "</a>";
                   echo "<div class='overlay'>";
                   echo "<div class='text'>";
                   echo "<i class='material-icons' style='font-size:36px'>search</i>";
-                  echo "<p><a href='details.php'>Discover more!</a></p>";
+                  echo "<p><a href='details.php?id=" . $row['petid'] . "'>Discover more!</a></p>";
                   echo "</div>";
                   echo "</div>";
                   echo "<div class='name'>" . htmlspecialchars($row['caption']) . "</div>";
@@ -43,7 +41,7 @@ $result = mysqli_query($conn, $sql);
           
             mysqli_close($conn);
             ?>
-            
+
             <div class="clearfix"></div>
         </div>
     </section>

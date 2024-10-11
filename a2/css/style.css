@@ -365,3 +365,7 @@ div.name {
     display: table;
     clear: both;
   }
+
+.detailsImg {
+    width: 50%;
+}
