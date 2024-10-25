@@ -14,9 +14,10 @@
                 <select id="navMenu" onchange=doMenu();>
                     <option value="">Select an Option...</option>
                     <option value="index.php">Home</option>
-                    <option value="pets.php">Discover Pets</option>
-                    <option value="add.php">Add a Pet</option>
+                    <option value="pets.php">Pets</option>
                     <option value="gallery.php">Gallery</option>
+                    <option value="register.php">Register</option>
+                    <option value="login.php">Login</option>
                 </select>
             </form>
         </div>
