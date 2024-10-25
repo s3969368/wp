@@ -1,9 +1,9 @@
 <?php
+session_start();
+
 include('includes/header.inc');
 include('includes/nav.inc');
 include("includes/db_connect.inc");
-
-session_start();
 
 // Check if form was submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
