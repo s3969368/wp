@@ -18,6 +18,7 @@
                     <option value="gallery.php">Gallery</option>
                     <option value="register.php">Register</option>
                     <option value="login.php">Login</option>
+                    <option value="add.php">Add</option>
                 </select>
             </form>
         </div>

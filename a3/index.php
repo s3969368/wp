@@ -1,12 +1,6 @@
 <?php
 include('includes/header.inc');
-?>
-
-<?php
 include('includes/nav.inc');
-?>
-
-<?php
 include("includes/db_connect.inc");
 ?>
 
@@ -16,7 +10,47 @@ include("includes/db_connect.inc");
                 <h1>PETS VICTORIA</h1>
                 <h2>WELCOME TO PET <br>ADOPTION</h2>
             </div>
-            <img src="images/main.jpeg" alt="main" class="main">
+            <div id="petCarousel" class="carousel slide w-50 mx-auto" data-bs-ride="carousel">
+                <!-- Indicators -->
+                <div class="carousel-indicators">
+                    <?php
+                    $indicatorIndex = 0;
+                    $sql = "SELECT image FROM pets ORDER BY upload_date DESC LIMIT 4";
+                    $result = $conn->query($sql);
+
+                    while ($indicatorIndex < $result->num_rows) {
+                        echo '<button type="button" data-bs-target="#petCarousel" data-bs-slide-to="' . $indicatorIndex . '"';
+                        echo ($indicatorIndex === 0) ? ' class="active" aria-current="true"' : '';
+                        echo '></button>';
+                        $indicatorIndex++;
+                    }
+                    ?>
+                </div>
+
+                <!-- Carousel Inner -->
+                <div class="carousel-inner">
+                    <?php
+                    $isActive = true;
+                    $result->data_seek(0);  // Reset query pointer to the start
+                    while ($row = $result->fetch_assoc()) {
+                        echo '<div class="carousel-item' . ($isActive ? ' active' : '') . '">';
+                        echo '<img src="images/' . htmlspecialchars($row['image']) . '" class="d-block w-100" alt="Pet image">';
+                        echo '</div>';
+                        $isActive = false;
+                    }
+
+                    $conn->close();
+                    ?>
+                </div>
+
+                <!-- Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#petCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#petCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
         </div>
 </main>
 
