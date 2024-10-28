@@ -1,0 +1,39 @@
+body {
+	font-family: arial, helvetica, sans-serif;
+	width: 70%;
+	margin: auto;
+}
+
+/*user messages*/
+.centre_text {
+	text-align: center;
+}
+
+form {
+	width: 80%;
+	margin: 1em auto;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+label {
+	margin-bottom: 0.5em;
+	margin-top: 0.5em;
+}
+
+input[type="submit"] {
+	margin-top: 1em;
+}
+
+table {
+	width: 100%;
+}
+
+.thumb {
+	max-height: 80px;
+	max-width: 110px;
+}
+
+.jumbotron {
+	margin-bottom: 0;
+	padding: 2rem 1rem;
+}

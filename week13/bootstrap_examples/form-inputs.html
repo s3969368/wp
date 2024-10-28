@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inputs</title>
+  <!-- Latest compiled and minified CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+
+    <h2>Form control: input</h2>
+    <p>The form below contains two input elements; one of type text and one of type password:</p>
+    <form>
+      <div class="mb-3 mt-3">
+        <label for="usr">Name:</label>
+        <input type="text" class="form-control" id="usr">
+      </div>
+      <div class="mb-3">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" id="pwd">
+      </div>
+    </form>
+    <br>
+    <br>
+    <h2>Form control: textarea</h2>
+    <p>The form below contains a textarea for comments:</p>
+    <form>
+      <div class="mb-3 mt-3">
+        <label for="comment">Comment:</label>
+        <textarea class="form-control" rows="5" id="comment" placeholder="Add your comments here..."></textarea>
+      </div>
+    </form>
+
+    <br>
+    <br>
+    <h2>Form control: checkbox</h2>
+    <p>The form below contains three checkboxes. The last option is disabled:</p>
+    <form>
+      <div class="form-check">
+        <input type="checkbox" value="" class="form-check-input"><label class="form-check-label">Software
+          Engineering</label>
+      </div>
+      <div class="form-check">
+        <input type="checkbox" value="" class="form-check-input"><label class="form-check-label">Web
+          Programming</label>
+      </div>
+      <div class="form-check">
+        <input type="checkbox" value="" class="form-check-input" disabled><label class="form-check-label">Database
+          Concepts</label>
+      </div>
+    </form>
+
+    <br>
+    <br>
+    <h2>Form control: inline checkbox</h2>
+    <p>The form below contains three inline checkboxes:</p>
+    <form>
+      <div class="row">
+        <div class="col form-check">
+          <input type="checkbox" value="" class="form-check-input"><label class="form-check-label">Software
+            Engineering</label>
+        </div>
+        <div class="col form-check">
+          <input type="checkbox" value="" class="form-check-input"><label class="form-check-label">Web
+            Programming</label>
+        </div>
+        <div class="col form-check">
+          <input type="checkbox" value="" disabled class="form-check-input"><label class="form-check-label">Database
+            Concepts</label>
+        </div>
+      </div>
+    </form>
+    <br>
+    <br>
+    <h2>Form control: radio buttons</h2>
+    <p>The form below contains three radio buttons. The last option is disabled:</p>
+    <form>
+      <div class="form-check">
+        <input type="radio" name="optradio" class="form-check-input"><label class="form-check-label">Software
+          Engineering</label>
+      </div>
+      <div class="form-check">
+        <input type="radio" name="optradio" class="form-check-input"><label class="form-check-label">Web
+          Programming</label>
+      </div>
+      <div class="form-check">
+        <input type="radio" name="optradio" class="form-check-input" disabled><label class="form-check-label">Database
+          Concepts</label>
+      </div>
+    </form>
+
+    <br>
+    <br>
+    <h2>Form control: inline radio buttons</h2>
+    <p>The form below contains three inline radio buttons:</p>
+    <form>
+      <div class="row">
+        <div class="col form-check">
+          <input type="radio" name="optradio" class="form-check-input"><label class="form-check-label">Software
+            Engineering</label>
+        </div>
+        <div class="col form-check">
+          <input type="radio" name="optradio" class="form-check-input"><label class="form-check-label">Web
+            Programming</label>
+        </div>
+        <div class="col form-check">
+          <input type="radio" name="optradio" class="form-check-input" disabled><label class="form-check-label">Database
+            Concepts</label>
+        </div>
+      </div>
+    </form>
+
+    <br>
+    <br>
+
+    <h2>Form control: select</h2>
+    <p>The form below contains two dropdown menus (select lists):</p>
+    <form>
+      <div class="mb-3 mt-3">
+        <label for="sel1">Select list (select one):</label>
+        <select class="form-control" id="sel1">
+          <option>Software Engineering</option>
+          <option>Web Programming</option>
+          <option>Database Concepts</option>
+          <option>Programming 1</option>
+          <option>Introduction to Programming</option>
+          <option>Networking 1</option>
+        </select>
+        <br>
+        <label for="sel2">Multiple select list (hold shift to select more than one):</label>
+        <select multiple class="form-control" id="sel2">
+          <option>Software Engineering</option>
+          <option>Web Programming</option>
+          <option>Database Concepts</option>
+          <option>Programming 1</option>
+          <option>Introduction to Programming</option>
+          <option>Networking 1</option>
+        </select>
+      </div>
+    </form>
+  </div>
+
+</body>
+
+</html>
