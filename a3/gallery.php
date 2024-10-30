@@ -1,12 +1,8 @@
 <?php
+session_start();
+
 include('includes/header.inc');
-?>
-
-<?php
 include('includes/nav.inc');
-?>
-
-<?php
 include('includes/db_connect.inc');
 
 $sql = "SELECT petid, image, caption FROM pets";
