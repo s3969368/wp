@@ -8,7 +8,7 @@ nav {
 
 .logo {
     float: left;
-    margin-left: 30px;
+    margin-left: 10px;
     width: 50px;
 }
 
@@ -384,4 +384,17 @@ div.name {
 .carousel-inner img {
     max-height: 500px;
     object-fit: cover;
+}
+
+.nav-link {
+    font-family: "Ysabeau SC", sans-serif;
+    color: rgb(211, 211, 211);
+}
+
+.navMenu {
+    display: flex;
+    gap: 15px;
+    font-size: 1.2em;
+    margin-top: 8px;
+    margin-left: 80px;
 }
