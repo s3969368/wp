@@ -10,16 +10,11 @@
         </div> 
 
         <div class="navMenu">
-            <form>
-                <select id="navMenu" onchange=doMenu();>
-                    <option value="">Select an Option...</option>
-                    <option value="index.php">Home</option>
-                    <option value="pets.php">Pets</option>
-                    <option value="gallery.php">Gallery</option>
-                    <option value="register.php">Register</option>
-                    <option value="login.php">Login</option>
-                    <option value="add.php">Add</option>
-                </select>
-            </form>
+            <a class="nav-link" href="index.php">Home</a>
+            <a class="nav-link" href="pets.php">Pets</a>
+            <a class="nav-link" href="gallery.php">Gallery</a>
+            <a class="nav-link" href="register.php">Register</a>
+            <a class="nav-link" href="login.php">Login</a>
+            <a class="nav-link" href="add.php">Add</a>
         </div>
     </nav>
