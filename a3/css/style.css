@@ -373,7 +373,8 @@ div.name {
 
 
 .detailsImg {
-    width: 50%;
+    width: auto;
+    max-height: 400px
 }
 
 #petCarousel {
