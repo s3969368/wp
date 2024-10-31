@@ -373,8 +373,45 @@ div.name {
 
 
 .detailsImg {
+    margin-top: 20px;
+    margin-left: 5px;
     width: auto;
     max-height: 400px
+}
+
+.detailsContainer {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    max-width: 500px;
+    margin: 20px 0;
+    padding: 10px 0;
+}
+
+.detailsInfo {
+    margin: auto;
+    text-align: center;
+    font-size: 16px;
+}
+
+.detailsTextContainer {
+    text-align: left;
+    float: right;
+    margin-right: 50px;
+}
+
+.detailsName {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+}
+
+.detailsDescription {
+    font-size: 1.1em;
+    color: #555;
+    max-width: 600px;
+    line-height: 1.6;
 }
 
 #petCarousel {
@@ -383,7 +420,7 @@ div.name {
 }
 
 .carousel-inner img {
-    max-height: 500px;
+    max-height: 350px;
     object-fit: cover;
 }
 
@@ -403,3 +440,4 @@ div.name {
 .alert {
     font-family: "Ysabeau SC", sans-serif;
 }
+
