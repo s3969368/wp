@@ -61,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
 
-    // Update pet details using a prepared statement
+    // Update pet details
     $stmt = $conn->prepare("UPDATE pets SET petname = ?, description = ?, caption = ?, age = ?, type = ?, location = ?, image = ?, username = ? WHERE petid = ?");
     $stmt->bind_param("sssissssi", $petname, $description, $caption, $age, $type, $location, $image, $username, $id);
 

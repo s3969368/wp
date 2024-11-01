@@ -1,11 +1,11 @@
 <?php
-session_start(); // Start session at the top of the file
+session_start();
 
 // Check if the user is logged in by verifying the session variable
 if (!isset($_SESSION['username'])) {
     // Redirect to login page if not logged in
     header("Location: login.php");
-    exit(); // Stop executing the rest of the page
+    exit();
 }
 
 include('includes/header.inc');

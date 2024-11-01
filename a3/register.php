@@ -33,16 +33,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $stmt->close();
     } else {
-        // Handle case where form fields are not filled
         $_SESSION['err'] = "Please fill in all required fields.";
     }
 }
 
-// Close the database connection
 $conn->close();
 ?>
 
-<!-- Bootstrap 5 Form -->
 <main>
     <div class="container">
         <h3>Register</h3>

@@ -30,7 +30,6 @@ if ($selected_type) {
             <p>For almost two decades, Pets Victoria has helped in creating true social change by bringing pet adoption into the mainstream. Our work has helped make a difference to the Victorian rescue community and thousands of pets in need of rescue and rehabilitation. But, until every pet is safe, respected, and loved, we all still have big, hairy work to do.</p>
         </div>
 
-        <!-- Dropdown for filtering pets by type -->
         <select class="form-select mb-4 w-500 mx-auto" id="petType" onchange="filterByType()">
             <option value="">Select type...</option>
             <?php
@@ -70,7 +69,6 @@ if ($selected_type) {
 </section>
 
 <script>
-    // JavaScript function to filter pets by type
     function filterByType() {
         const selectedType = document.getElementById('petType').value;
         window.location.href = 'gallery.php?type=' + selectedType;

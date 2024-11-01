@@ -11,12 +11,12 @@ $result = $conn->query($sql);
 $row = mysqli_fetch_array($result);
 
 // Get the logged-in user's username from the session
-$loggedInUsername = $_SESSION['username'] ?? ''; // Replace 'username' with your actual session variable name
+$loggedInUsername = $_SESSION['username'] ?? ''; 
 ?>
 
 <main>
     <img class="detailsImg" src="images/<?= htmlspecialchars($row['image']) ?>" alt="<?= htmlspecialchars($row['petname']) ?>">
-    <!-- Text container on the right side -->
+    
     <div class="detailsTextContainer">
         <p class="detailsName"><?= htmlspecialchars($row['petname']) ?></p>
         <p class="detailsDescription"><?= htmlspecialchars($row['description']) ?></p>

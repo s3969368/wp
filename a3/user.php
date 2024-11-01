@@ -1,14 +1,13 @@
 <?php
 session_start();
 
-include('includes/db_connect.inc'); // Database connection
-include('includes/header.inc'); // Header
-include('includes/nav.inc'); // Navigation
+include('includes/db_connect.inc');
+include('includes/header.inc');
+include('includes/nav.inc');
 
-// Check if the user is logged in
 if (!isset($_SESSION['username'])) {
     echo "<p>You must be logged in to view this page.</p>";
-    exit; // Exit if the user is not logged in
+    exit;
 }
 
 $username = $_SESSION['username']; // Get the logged-in username
@@ -22,15 +21,15 @@ $result = $stmt->get_result();
 ?>
 
 <main>
-    <h1 class="userh1"><?= htmlspecialchars($username) ?>'s Collection</h1> <!-- Displaying the user's name in the title -->
+    <h1 class="userh1"><?= htmlspecialchars($username) ?>'s Collection</h1>
     
     <?php
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             ?>
-            <div class="petCard"> <!-- Added a wrapper for each pet's details -->
+            <div class="petCard">
                 <img class="detailsImg" src="images/<?= htmlspecialchars($row['image']) ?>" alt="<?= htmlspecialchars($row['petname']) ?>">
-                <!-- Text container on the right side -->
+                
                 <div class="detailsTextContainer">
                     <p class="detailsName"><?= htmlspecialchars($row['petname']) ?></p>
                     <p class="detailsDescription"><?= htmlspecialchars($row['description']) ?></p>

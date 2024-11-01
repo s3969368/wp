@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-// Check if the user is logged in
 if (!isset($_SESSION['username'])) {
     header("Location: login.php");
     exit();
@@ -9,7 +8,7 @@ if (!isset($_SESSION['username'])) {
 
 include('includes/db_connect.inc');
 
-// Get the pet ID from URL parameter and validate it
+// Get the pet ID
 $id = $_GET['id'] ?? null;
 if (!$id || !is_numeric($id)) {
     echo "Invalid pet ID!";

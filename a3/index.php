@@ -10,7 +10,7 @@ if (isset($_SESSION['usrmsg'])): ?>
         <?= htmlspecialchars($_SESSION['usrmsg']) ?>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
-    <?php unset($_SESSION['usrmsg']); // Clear message after displaying ?>
+    <?php unset($_SESSION['usrmsg']); ?>
 <?php endif; ?>
 
 <main class="main1">
@@ -20,6 +20,7 @@ if (isset($_SESSION['usrmsg'])): ?>
                 <h2>WELCOME TO PET <br>ADOPTION</h2>
             </div>
             <div id="petCarousel" class="carousel slide w-50 mx-auto" data-bs-ride="carousel">
+
                 <!-- Indicators -->
                 <div class="carousel-indicators">
                     <?php
@@ -36,7 +37,6 @@ if (isset($_SESSION['usrmsg'])): ?>
                     ?>
                 </div>
 
-                <!-- Carousel Inner -->
                 <div class="carousel-inner">
                     <?php
                     $isActive = true;
