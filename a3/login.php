@@ -37,8 +37,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['username'], $_POST['p
 }
 ?>
 
-<main class="">
-    <h2 class="mt-5">Login</h2>
+<main class="container">
+    <h3>Login</h3>
     <?php if (isset($_SESSION['err'])): ?>
         <p style="color: red;"><?= $_SESSION['err'] ?></p>
         <?php unset($_SESSION['err']); ?>

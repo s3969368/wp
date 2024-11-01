@@ -14,7 +14,7 @@ nav {
 
 .search {
     float: right;
-    margin-top: 10px;
+    margin-top: 7px;
     margin-right: 20px;
     padding-left: 0px;
     width: 30px;
@@ -207,7 +207,7 @@ textarea {
     background-color: #ffffff;
 }
 
-.btn {
+.submit-btn, .clear-btn {
     display: inline-block;
     font-size: 0.7em;
     padding: 5px 10px;
@@ -441,3 +441,22 @@ div.name {
     font-family: "Ysabeau SC", sans-serif;
 }
 
+.form-select {
+    margin-top: 5px;
+    font-family: "Ysabeau SC", sans-serif;;
+}
+
+.button-container {
+    margin-left: 10px;
+    font-family: "Ysabeau SC", sans-serif;
+}
+
+.container h3 {
+    font-family: "Poetsen One", sans-serif;
+    font-size: 1.3em;
+    color: #36454F;
+}
+
+.userh1 {
+    font-family: "Ysabeau SC", sans-serif;
+}

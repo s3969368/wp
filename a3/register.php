@@ -41,8 +41,8 @@ $conn->close();
 
 <!-- Bootstrap 5 Form -->
 <main>
-    <div>
-        <h2 class="mt-5">Register</h2>
+    <div class="container">
+        <h3>Register</h3>
         <form action="register.php" method="post">
             <div class="mb-3 mt-3">
                 <label for="username" class="form-label">Username</label>

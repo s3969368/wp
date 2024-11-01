@@ -6,12 +6,66 @@ include('includes/nav.inc');
 include("includes/db_connect.inc");
 ?>
 
-<main class="">
-        <div class="container">
-          
+<main class="container">
+    <h3>Search for a Pet</h3>
+    <form action="search.php" method="GET" class="form-inline">
+        <input type="text" name="keyword" placeholder="Enter keyword" class="form-control mb-2 mr-sm-2">
+        
+        <select name="type" class="form-control mb-2 mr-sm-2">
+            <option value="">All Types</option>
+            <?php
+            // Populate dropdown with pet types from database
+            $typesResult = $conn->query("SELECT DISTINCT type FROM pets");
+            while ($row = $typesResult->fetch_assoc()) {
+                echo '<option value="' . htmlspecialchars($row['type']) . '">' . htmlspecialchars($row['type']) . '</option>';
+            }
+            ?>
+        </select>
+        <button type="submit" class="btn btn-primary mb-2">Search</button>
+    </form>
+
+    <div class="main-section-4">
+        <div class="clearfix">
+            <?php
+            if (isset($_GET['keyword']) || isset($_GET['type'])) {
+                $keyword = "%" . $_GET['keyword'] . "%";
+                $type = isset($_GET['type']) ? $_GET['type'] : ''; // Check if 'type' is set
+
+                // Prepare and execute the search query with filtering by type and keyword
+                $query = "SELECT * FROM pets WHERE (petname LIKE ? OR description LIKE ?)";
+                $params = [$keyword, $keyword];
+
+                if (!empty($type)) {
+                    $query .= " AND type = ?";
+                    $params[] = $type;
+                }
+
+                $stmt = $conn->prepare($query);
+                $stmt->bind_param(str_repeat('s', count($params)), ...$params);
+                $stmt->execute();
+                $result = $stmt->get_result();
+
+                if ($result->num_rows > 0) {
+                    while ($pet = $result->fetch_assoc()) {
+                        echo "<div class='responsive'>";
+                        echo "<div class='gallery'>";
+                        echo "<img src='images/" . htmlspecialchars($pet['image'] ?? '') . "' alt='" . htmlspecialchars($pet['caption'] ?? '') . "'>";
+                        echo "<div class='overlay'>";
+                        echo "<div class='text'>";
+                        echo "<i class='material-icons' style='font-size:36px'>search</i>";
+                        echo "<p><a href='details.php?id=" . htmlspecialchars($pet['petid'] ?? '') . "'>Discover more!</a></p>";
+                        echo "</div>";
+                        echo "</div>";
+                        echo "<div class='name'>" . htmlspecialchars($pet['caption'] ?? '') . "</div>";
+                        echo "</div></div>";
+                    }
+                } else {
+                    echo "<p>No pets found matching your criteria.</p>";
+                }
+            }
+            ?>
         </div>
+    </div>
 </main>
 
-<?php
-include('includes/footer.inc');
-?>
+<?php include('includes/footer.inc'); ?>
