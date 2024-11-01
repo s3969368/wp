@@ -19,9 +19,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bind_param("ss", $username, $password);
 
         if ($stmt->execute()) {
-            // Registration successful, set success message
+            // Registration successful, log in the user by setting session
+            $_SESSION['username'] = $username;
             $_SESSION['usrmsg'] = "You have successfully registered";
-            header("Location: index.php"); // Redirect to home or login page
+
+            // Redirect to the home page or any other page
+            header("Location: index.php");
             exit();
         } else {
             // Handle errors during execution
